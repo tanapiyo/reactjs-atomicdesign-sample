@@ -11,10 +11,10 @@ const Tweet = (...props) =>{
     return(
         <Card>
             <CardContent>
-                {/* <div>{props.body}</div>
-                <div>{props.author}</div>
-            <div>{props.created_at}</div> */}
-              <Avatar alt="Icon" src="test" />名前　時間 ツイート内容
+              <Avatar alt="Icon" src="test" />
+              <div>{props[0].body}</div>
+              <div>{props[0].author}</div>
+              <div>{props[0].created_at}</div>
             </CardContent> 
             <CardActions>
               edit

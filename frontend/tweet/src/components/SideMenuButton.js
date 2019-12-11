@@ -2,9 +2,9 @@ import React from 'react';
 import Button from '@material-ui/core/Button';
 import Icon from '@material-ui/core/Icon';
 
-const SideMenuButton = (icon, text) => {
+const SideMenuButton = (props) => {
     return(
-        <Button><Icon className={icon} color="primary" />{text}</Button>
+        <Button><Icon className={props.icon} color="primary" />{props.text}</Button>
     );
 };
 

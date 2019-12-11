@@ -1,6 +1,5 @@
 import React from 'react';
 import List from './components/List'
-import Button from '@material-ui/core/Button';
 
 function App() {
   return (

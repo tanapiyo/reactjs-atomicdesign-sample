@@ -3,21 +3,34 @@ import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
 import Icon from '@material-ui/core/Icon';
 import SideMenuButton from './SideMenuButton'
+import styled from 'styled-components';
 
 const SideMenu = () => {
+    const TwitterIcon = styled(Button)`
+        border-radius: 50%;
+        padding: 15px 10px;
+        `;
+    
+    const TweetButton = styled(Button)`
+        border-radius: 50px;
+        font-size: 1.1em;
+        font-weight: bold;
+        padding: 10px;
+        `;
+ 
+    
     return(
-        <Grid container justify="center" alignItems="center" spacing={4}>
-            <Grid item xs={8}><SideMenuButton icon="fab fa-twitter" text="" /></Grid>
-            <Grid item xs={8}><SideMenuButton icon="fas fa-home" text="ホーム" /></Grid>
-            <Grid item xs={8}><SideMenuButton icon="fas fa-hashtag" text="話題を検索" /></Grid>
-            <Grid item xs={8}><SideMenuButton icon="fas fa-bell" text="通知" /></Grid>
-            <Grid item xs={8}><SideMenuButton icon="far fa-envelope" text="メッセージ" /></Grid>
-            <Grid item xs={8}><SideMenuButton icon="far fa-bookmark" text="ブックマーク" /></Grid>
-            <Grid item xs={8}><SideMenuButton icon="far fa-list-alt" text="リスト" /></Grid>
-            <Grid item xs={8}><SideMenuButton icon="fas fa-user-circle" text="プロフィール" /></Grid>
-            <Grid item xs={8}><SideMenuButton icon="fas fa-ellipsis-h" text="もっと見る" /></Grid>
-
-            <Grid item xs={8}><Button variant="contained" color="primary">ツイート</Button></Grid>
+        <Grid container justify="center" alignItems="center">
+            <Grid item xs={10}><TwitterIcon><Icon className="fab fa-twitter" color="primary" /></TwitterIcon></Grid>
+            <Grid item xs={10}><SideMenuButton icon="fas fa-home" text="ホーム" /></Grid>
+            <Grid item xs={10}><SideMenuButton icon="fas fa-hashtag" text="話題を検索" /></Grid>
+            <Grid item xs={10}><SideMenuButton icon="fas fa-bell" text="通知" /></Grid>
+            <Grid item xs={10}><SideMenuButton icon="far fa-envelope" text="メッセージ" /></Grid>
+            <Grid item xs={10}><SideMenuButton icon="far fa-bookmark" text="ブックマーク" /></Grid>
+            <Grid item xs={10}><SideMenuButton icon="far fa-list-alt" text="リスト" /></Grid>
+            <Grid item xs={10}><SideMenuButton icon="fas fa-user-circle" text="プロフィール" /></Grid>
+            <Grid item xs={10}><SideMenuButton icon="fas fa-ellipsis-h" text="もっと見る" /></Grid>
+            <Grid item xs={10}><TweetButton fullWidth="true" variant="contained" color="primary">ツイート</TweetButton></Grid>
 
         </Grid>
         

@@ -7,14 +7,14 @@ import styled from 'styled-components';
 const TrendLinks = () => {
     const preventDefault = event => event.preventDefault();
     const StyledLink = styled(Link)`
-      color: #616161;
-      font-size: 0.8em;
       margin: 10px;
+      color: #616161;
+      font-size: 13px;
       `;
     const CopyRight = styled.span`
-      color: #616161;
-      font-size: 0.8em;
       margin: 10px;
+      color: #616161;
+      font-size: 13px;
       `;
     return( 
         <React.Fragment>

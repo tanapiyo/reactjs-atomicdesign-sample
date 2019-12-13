@@ -6,14 +6,20 @@ import styled from 'styled-components';
 
 const TrendSearch = () => {
     const SearchTextField = styled(TextField)`
-      margin: 10px 0px;
       background: #f5f5f5; 
       `;
     
+    const StickySearch = styled(Grid)`
+      position: sticky;
+      top: 0px;
+      z-index: 10;
+      background: #fff;
+      `;
+    
     return( 
-        <Grid item xs={12}>
+        <StickySearch item xs={12}>
             <SearchTextField fullWidth="true" label="キーワード検索" variant="outlined" />
-        </Grid>
+        </StickySearch>
     );
 };
 

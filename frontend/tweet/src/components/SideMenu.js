@@ -14,6 +14,7 @@ const SideMenu = () => {
     
     const TweetButton = styled(Button)`
         border-radius: 50px;
+        color: #fff;
         &:hover {
             color: #fff;
         }

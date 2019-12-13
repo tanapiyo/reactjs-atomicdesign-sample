@@ -3,7 +3,7 @@ import { createMuiTheme } from '@material-ui/core/styles';
 export default createMuiTheme({
   palette: {
     primary: {
-        main: '#1e88e5',
+        main: '#42a5f5',
         light: '#e3f2fd',//for background
     },
     secondary: {
@@ -43,7 +43,7 @@ export default createMuiTheme({
         padding: 15,
         '&:hover': {
           backgroundColor: '#e3f2fd',
-          color: '#1e88e5'
+          color: '#42a5f5'
         }
       }
     }

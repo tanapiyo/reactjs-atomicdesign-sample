@@ -1,10 +1,9 @@
 import React, {useState, useEffect} from 'react';
 import Grid from '@material-ui/core/Grid';
-
+import Typography from '@material-ui/core/Typography';
 import axios from 'axios';
 import Tweet from './Tweet'
-// import { useScrollTrigger } from '@material-ui/core';
-// import Container from '@material-ui/core/Container';
+import styled from 'styled-components';
 
 const TweetMain = () => {
     const [tweetData, setTweetData] = useState([]);
@@ -32,18 +31,47 @@ const TweetMain = () => {
                     "body": "Hi, I am Alice!",
                     "created_at": "2019-12-08T14:29:29.633301Z",
                     "author": "Mary"
-                }
+                },
+                {
+                    "body": "Hi, I am Alice!",
+                    "created_at": "2019-12-08T14:29:29.633301Z",
+                    "author": "Mary"
+                },
+                {
+                    "body": "Hi, I am Alice!",
+                    "created_at": "2019-12-08T14:29:29.633301Z",
+                    "author": "Mary"
+                },
+                {
+                    "body": "Hi, I am Alice!",
+                    "created_at": "2019-12-08T14:29:29.633301Z",
+                    "author": "Mary"
+                },
+                {
+                    "body": "Hi, I am Alice!",
+                    "created_at": "2019-12-08T14:29:29.633301Z",
+                    "author": "Mary"
+                },
             ]
             setTweetData(response);
         };
         fetch();
       }, []);
 
+    const StickyHome = styled(Grid)`
+      position: sticky;
+      top: 0px;
+      padding: 20px 5px;
+      border: solid 1px #eeeeee;
+      background: #fff;
+      z-index: 10;
+      `;
+
 
 
     return(
         <Grid container justify="center" alignItems="center">
-            <Grid item xs={12}>ホーム（固定の予定）</Grid>
+            <StickyHome item xs={12}><Typography variant="h3">ホーム</Typography></StickyHome>
             <Grid item xs={12}>ツイートcreateフォーム追加予定</Grid>
             {tweetData.map((tweet) => (
                 <Grid item xs={12}><Tweet {...tweet}/></Grid>

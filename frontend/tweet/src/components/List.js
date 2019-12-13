@@ -1,7 +1,6 @@
 import React from 'react';
 import Grid from '@material-ui/core/Grid';
 
-import axios from 'axios';
 import SideMenu from './SideMenu'
 import Trend from './Trend'
 import TweetMain from './TweetMain'

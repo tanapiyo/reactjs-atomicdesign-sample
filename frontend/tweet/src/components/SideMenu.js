@@ -4,18 +4,19 @@ import Button from '@material-ui/core/Button';
 import Icon from '@material-ui/core/Icon';
 import SideMenuButton from './SideMenuButton'
 import styled from 'styled-components';
+import Typography from '@material-ui/core/Typography';
 
 const SideMenu = () => {
     const TwitterIcon = styled(Button)`
         border-radius: 50%;
-        padding: 15px 10px;
+        padding: 20px 10px;
         `;
     
     const TweetButton = styled(Button)`
         border-radius: 50px;
-        font-size: 1.1em;
-        font-weight: bold;
-        padding: 10px;
+        &:hover {
+            color: #fff;
+        }
         `;
  
     
@@ -30,7 +31,9 @@ const SideMenu = () => {
             <Grid item xs={10}><SideMenuButton icon="far fa-list-alt" text="リスト" /></Grid>
             <Grid item xs={10}><SideMenuButton icon="fas fa-user-circle" text="プロフィール" /></Grid>
             <Grid item xs={10}><SideMenuButton icon="fas fa-ellipsis-h" text="もっと見る" /></Grid>
-            <Grid item xs={10}><TweetButton fullWidth="true" variant="contained" color="primary">ツイート</TweetButton></Grid>
+            <Grid item xs={10}><TweetButton fullWidth="true" variant="contained" color="primary">
+                <Typography variant="h3">ツイート</Typography>
+            </TweetButton></Grid>
 
         </Grid>
         

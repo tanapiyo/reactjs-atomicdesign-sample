@@ -1,6 +1,5 @@
 import React from 'react';
 import Card from '@material-ui/core/Card';
-import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import Grid from '@material-ui/core/Grid';
 
@@ -43,7 +42,9 @@ const Tweet = (...props) =>{
       return timediff_hour
     }
 
+
     return(
+      
         <StyledCard>
             <Grid container >
               <CenterGrid item xs={2}>
@@ -51,9 +52,9 @@ const Tweet = (...props) =>{
               </CenterGrid>
               <Grid item xs={10}>
                 <CardContent>
-                    <SpanName>{props[0].author}</SpanName>
-                    <SpanTime>{getTimeDiffHour(props[0].created_at)}時間</SpanTime>
-                    <div>{props[0].body}</div>
+                    <SpanName>{props[0]['author']['name']}</SpanName>
+                    <SpanTime>{getTimeDiffHour(props[0]['created_at'].created_at)}時間</SpanTime>
+                    <div>{props[0]['body']}</div>
 
                   <IconButton aria-label="add to favorites">
                     <FavoriteIcon />

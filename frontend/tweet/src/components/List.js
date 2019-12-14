@@ -1,9 +1,9 @@
 import React from 'react';
 import Grid from '@material-ui/core/Grid';
 
-import SideMenu from './SideMenu'
-import Trend from './Trend'
-import TweetMain from './TweetMain'
+import SideMenu from './SideMenu/SideMenu'
+import Trend from './Trends/Trend'
+import TweetMain from './Tweets/TweetMain'
 import Container from '@material-ui/core/Container';
 
 const List = () => {

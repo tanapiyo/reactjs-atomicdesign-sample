@@ -1,4 +1,5 @@
 import { createMuiTheme } from "@material-ui/core/styles";
+import { dark } from "@material-ui/core/styles/createPalette";
 
 export default createMuiTheme({
   palette: {
@@ -7,8 +8,9 @@ export default createMuiTheme({
       light: "#e3f2fd" //for background
     },
     secondary: {
-      light: "#9e9e9e",
-      main: "#616161" //copyrightとか
+      light: "#f5f5f5", //search inputの背景とか
+      main: "#9e9e9e",
+      dark: "#616161" //copyrightとか
     }
   },
   typography: {
@@ -32,7 +34,7 @@ export default createMuiTheme({
       fontWeight: 500
     },
     body2: {
-      fontSize: 10,
+      fontSize: 12,
       color: "#616161"
     }
   },

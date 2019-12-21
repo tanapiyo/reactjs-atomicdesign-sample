@@ -16,6 +16,9 @@ import FormatListBulletedIcon from "@material-ui/icons/FormatListBulleted";
 import AccountCircleIcon from "@material-ui/icons/AccountCircle";
 import MoreHorizIcon from "@material-ui/icons/MoreHoriz";
 
+import Hidden from "@material-ui/core/Hidden";
+import CreateIcon from "@material-ui/icons/Create";
+
 const SideMenu = () => {
   const TwitterIconButton = styled(Button)`
     border-radius: 50%;
@@ -78,9 +81,16 @@ const SideMenu = () => {
         </SideMenuButton>
       </Grid>
       <Grid item xs={10}>
-        <TweetButton fullWidth="true" variant="contained" color="primary">
-          <Typography variant="h3">ツイート</Typography>
-        </TweetButton>
+        <Hidden mdDown>
+          <TweetButton fullWidth="true" variant="contained" color="primary">
+            <Typography variant="h3">ツイート</Typography>
+          </TweetButton>
+        </Hidden>
+        <Hidden lgUp>
+          <TweetButton variant="contained" color="primary">
+            <CreateIcon fontSize="large" />
+          </TweetButton>
+        </Hidden>
       </Grid>
     </Grid>
   );

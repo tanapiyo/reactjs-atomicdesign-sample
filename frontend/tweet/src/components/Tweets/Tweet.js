@@ -51,9 +51,7 @@ const Tweet = (...props) => {
         <Grid item xs={10}>
           <CardContent>
             <SpanName>{props[0]["author"]["name"]}</SpanName>
-            <SpanTime>
-              {getTimeDiffHour(props[0]["created_at"].created_at)}時間
-            </SpanTime>
+            <SpanTime>{getTimeDiffHour(props[0]["created_at"])}時間</SpanTime>
             <div>{props[0]["body"]}</div>
 
             <IconButton aria-label="add to favorites">

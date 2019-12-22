@@ -1,8 +1,8 @@
 import React from "react";
 import Button from "@material-ui/core/Button";
-import Icon from "@material-ui/core/Icon";
 import styled from "styled-components";
 import Typography from "@material-ui/core/Typography";
+import Hidden from "@material-ui/core/Hidden";
 
 const SideMenuButton = props => {
   const StyledButton = styled(Button)`
@@ -18,7 +18,9 @@ const SideMenuButton = props => {
   return (
     <StyledButton>
       {props.children}
-      <StyledTypography variant="h3">{props.text}</StyledTypography>
+      <Hidden mdDown>
+        <StyledTypography variant="h3">{props.text}</StyledTypography>
+      </Hidden>
     </StyledButton>
   );
 };

@@ -4,6 +4,9 @@ import Typography from "@material-ui/core/Typography";
 import axios from "axios";
 import Tweet from "./Tweet";
 import styled from "styled-components";
+import Hidden from "@material-ui/core/Hidden";
+import CreateTweet from "../CreateTweets/CreateTweet";
+import { borderBottom } from "@material-ui/system";
 
 const TweetMain = () => {
   const [tweetData, setTweetData] = useState([]);
@@ -75,14 +78,20 @@ const TweetMain = () => {
     z-index: 10;
   `;
 
+  const BorderdGrid = styled(Grid)`
+    border-bottom: solid {theme.secondary} 5px;
+  `;
+
   return (
     <Grid container justify="center" alignItems="center">
       <StickyHome item xs={12}>
         <Typography variant="h3">ホーム</Typography>
       </StickyHome>
-      <Grid item xs={12}>
-        ツイートcreateフォーム追加予定
-      </Grid>
+      <Hidden smDown>
+        <BorderdGrid item xs={12}>
+          <CreateTweet borderColor="secondary" />
+        </BorderdGrid>
+      </Hidden>
       {tweetData.map(tweet => (
         <Grid item xs={12}>
           <Tweet {...tweet} />

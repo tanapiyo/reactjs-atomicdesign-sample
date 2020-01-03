@@ -29,6 +29,10 @@ export default createMuiTheme({
       fontSize: 18,
       fontWeight: 700
     },
+    h4: {
+      fontSize: 14,
+      fontWeight: 700
+    },
     button: {
       fontSize: 14,
       fontWeight: 500
